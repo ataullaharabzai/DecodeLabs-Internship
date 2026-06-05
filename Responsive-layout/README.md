@@ -1,7 +1,7 @@
 # Static Web Page
 
 ## Overview
-This project is a responsive layout created as a part of my internship task at CodeLabs organization. 
+This project is a responsive layout created as a part of my internship task at DecodeLabs organization. 
 the purpose of this web page is to practice my responsive skills in a professional way.
 
 ## Features
