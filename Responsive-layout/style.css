@@ -36,11 +36,17 @@ nav button {
     background-color: #2e8b57;
     color: white;
     padding: 12px 24px;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: transparent;
+    color: #2e8b57;
+    border: 2px solid #2e8b57;
 }
 
 .hero {
@@ -75,8 +81,8 @@ nav button {
     flex-wrap: wrap; */
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
     padding: 10px;
+    gap: 15px;
 }
 
 .card {
@@ -91,6 +97,13 @@ nav button {
     flex-wrap: wrap;
     font-weight: 500;
     border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all .2s ease-in;
+}
+
+.card:hover {
+    cursor: pointer;
+    border: 2px solid #2e8b57;
 }
 
 #weight {
@@ -153,9 +166,11 @@ footer .footer-text {
     .hero {
         margin: 0 auto;
     }
+
     #hero-title {
         font-size: 1rem;
     }
+
     .footer-text {
         font-size: 14px;
     }
@@ -164,15 +179,15 @@ footer .footer-text {
 @media (min-width: 768px) {
     .hero {
         margin: 0 auto;
-        text-align: center;
     }
+
     #hero-title {
         font-size: 3rem;
     }
+
     .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
     }
 }
 
