@@ -211,3 +211,19 @@ nav ul li:hover {
     color: white;
     transform: scale(1.05);
 }
+
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    width: 100%;
+    max-width: 300px;
+}
