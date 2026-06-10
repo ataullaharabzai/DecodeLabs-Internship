@@ -11,6 +11,7 @@ body {
     background-color: var(--bg);
     color: var(--text);
     transition: .3s ease;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -71,6 +72,11 @@ nav ul li:hover {
     color: var(--primary);
     cursor: pointer;
     transform: translateY(-4px);
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--text);
 }
 
 .nav-btns {
@@ -337,4 +343,42 @@ nav ul li:hover {
     font-size: clamp(13px, 16px, 14px);
     color: rgb(102, 101, 101);
     margin-top: 5px;
+}
+
+footer {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    color: var(--text);
+    border-top: 2px solid var(--border);
+}
+
+.footer-text {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+#message-card {
+    width: clamp(280px, 50vw, 400px);
+    text-align: center;
+    padding: 25px;
+    color: white;
+    font-size: clamp(18px, 1rem, 1.5rem);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    opacity: 0;
+    border-radius: 20px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 1000;
+}
+
+#message-card.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
 }

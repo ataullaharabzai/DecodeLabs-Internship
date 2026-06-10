@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arabzai Hospital</title>
+    <title>DentalCare Clinic</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,38 +13,47 @@
     <header>
         <nav>
             <div class="logo">
-                <h2>Arabzai Medical Complex</h2>
+                <h2>DentalCare Clinic</h2>
             </div>
             <ul class="nav-items">
                 <li>Home</li>
-                <li>Doctors</li>
-                <li>Services</li>
+                <a href="#doctor-section">
+                    <li>Doctors</li>
+                </a>
+                <a href="#service-section">
+                    <li>Services</li>
+                </a>
                 <li>Contact Us</li>
             </ul>
             <div class="nav-btns">
                 <button id="toggle-theme">Dark</button>
-                <button id="login-out-btn">Log out</button>
+                <button id="logout-btn">Log out</button>
             </div>
         </nav>
     </header>
 
-    <div class="login-card" style="display: none;">
+    <div class="login-card">
         <h2>Login to continue</h2>
         <div class="inputs">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
+            <input id="username" type="text" placeholder="Full Name">
+            <input id="userEmail" type="email" placeholder="Email">
+            <input id="userPassword" type="password" placeholder="Password">
         </div>
         <button id="login-btn" type="submit">Login</button>
     </div>
 
-    <main>
-        <section class="dashboard">
+    <main id="dashboard">
+        <section>
             <div class="hero">
                 <p id="big-title">Every Smile Deserves the <span id="title-best">Best Care</span></p>
                 <p>From preventive care to cosmetic solutions, We are here to keep you smiling confidently</p>
                 <div class="hero-btns">
-                    <button>Explore Services</button>
-                    <button>Book Appointment</button>
+                    <a href="#service-section">
+                        <button>Explore Services</button>
+                    </a>
+                    <a href="#doctor-section">
+                        <button>Book Appointment</button>
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
@@ -52,7 +61,7 @@
             </div>
         </section>
 
-        <section class="services-list">
+        <section id="service-section" class="services-list">
             <h2>We Serve you with</h2>
             <div class="service-cards">
                 <div class="service-card">
@@ -78,7 +87,7 @@
             </div>
         </section>
 
-        <section class="doctors-list">
+        <section id="doctor-section" class="doctors-list">
             <h2>Meet Our Brilliant Doctors</h2>
             <div class="doctor-cards">
                 <div class="doctor-card">
@@ -113,8 +122,14 @@
         </section>
     </main>
 
+    <div id="message-card">
+        <p></p>
+    </div>
+
     <footer>
-        <p>This is footer, text will appear here</p>
+        <div class="footer-text">
+            <p>© 2026 DentalCare Clinic | Crafted with care for healthy and confident smiles.</p>
+        </div>
     </footer>
 
     <script src="app.js"></script>
