@@ -29,18 +29,21 @@ const updateUI = () => {
 
 loginFormBtn.addEventListener('click', () => {
     if (username.value === "") {
+        messageCard.style.display = 'block'
         messageCard.textContent = 'Plaese enter username'
         messageCard.style.backgroundColor = '#bb2124'
         messageCard.classList.add('show')
         return;
     }
     if (userEmail.value === "") {
+        messageCard.style.display = 'block'
         messageCard.textContent = 'Plaese enter Email'
         messageCard.style.backgroundColor = '#bb2124'
         messageCard.classList.add('show')
         return;
     }
     if (userPassword.value === "") {
+        messageCard.style.display = 'block'
         messageCard.textContent = 'Plaese enter Password'
         messageCard.style.backgroundColor = '#bb2124'
         messageCard.classList.add('show')
