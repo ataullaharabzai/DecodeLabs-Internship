@@ -22,7 +22,7 @@ body {
     --border: #e5e7eb;
 }
 
-[data-theme='dark'] {
+.dark {
     --bg: #0f172a;
     --card: #1e293b;
     --text: #f1f5f9;
@@ -39,7 +39,7 @@ header {
 }
 
 .logo {
-    color: #073868;
+    color: #4f46e5;
 }
 
 header nav {
@@ -142,6 +142,7 @@ nav ul a {
     padding: 8px;
     border-radius: 5px;
     outline: none;
+    border: none;
     border: 2px solid var(--border);
 }
 
@@ -159,6 +160,7 @@ nav ul a {
     cursor: pointer;
     background-color: transparent;
     transition: .2s ease;
+    color: var(--text);
 }
 
 #login-btn:hover {
@@ -194,11 +196,12 @@ nav ul a {
 
 .hero-btns {
     width: 100%;
-    max-width: 300px;
+    max-width: 340px;
     padding: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 15px;
 }
@@ -232,7 +235,6 @@ nav ul a {
 }
 
 .hero-image img {
-    mix-blend-mode: multiply;
     object-fit: cover;
     width: 100%;
     max-width: 300px;
@@ -285,7 +287,7 @@ nav ul a {
 
 .service-card p {
     font-size: clamp(13px, 16px, 14px);
-    color: rgb(102, 101, 101);
+    color: rgb(127, 126, 126);
 }
 
 .doctors-list {
@@ -332,7 +334,6 @@ nav ul a {
 }
 
 .doctor-card img {
-    mix-blend-mode: multiply;
     width: 100%;
     max-width: 120px;
     object-fit: cover;
@@ -341,7 +342,7 @@ nav ul a {
 
 .doctor-card p {
     font-size: clamp(13px, 16px, 14px);
-    color: rgb(102, 101, 101);
+    color: rgb(127, 126, 126);
     margin-top: 5px;
 }
 
@@ -381,4 +382,30 @@ footer {
 #message-card.show {
     opacity: 1;
     transform: translate(-50%, 0);
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        margin: auto;
+    }
+
+    .nav-btns {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        gap: 10px;
+    }
+
+    .nav-btns button {
+        width: 100%;
+        max-width: 200px;
+    }
 }

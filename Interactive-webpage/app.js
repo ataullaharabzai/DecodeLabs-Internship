@@ -83,3 +83,25 @@ logOutBtn.addEventListener('click', () => {
 })
 
 updateUI()
+
+const savedTheme = localStorage.getItem('theme')
+
+if(savedTheme === 'dark') {
+    document.body.classList.add('dark')
+}
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark')
+
+    if(document.body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark')
+        themeBtn.style.backgroundColor = 'white'
+        themeBtn.textContent = 'Light'
+        themeBtn.style.color = 'black'
+    } else {
+        localStorage.setItem('theme', 'light')
+        themeBtn.style.backgroundColor = '#232429'
+        themeBtn.textContent = 'Dark'
+        themeBtn.style.color = 'white'
+    }
+})
